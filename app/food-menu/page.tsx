@@ -1,12 +1,13 @@
-'use client'
+import { FoodMenu } from "@/components/food-menu"
 
-export default function FoodMenu(){
-    return(
-        <div className="min-h-screen flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-bold mb-8">Food Menu</h1>
-            <p className="text-lg text-center max-w-2xl">
-                Explore our delicious food menu featuring a variety of appetizers, main courses, and desserts crafted to satisfy your cravings. Whether you&apos;re in the mood for something light or a hearty meal, we have options to delight every palate.
-            </p>
-        </div>
-    )
+export default function MenuPage() {
+  return (
+    <div className="min-h-screen bg-background py-12 px-4 mt-24 mb-24">
+      <div className="text-center mb-10">
+        <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-2">Our Menu</h1>
+        <p className="text-muted-foreground">Fresh food, cold drinks, good times</p>
+      </div>
+      <FoodMenu />
+    </div>
+  )
 }

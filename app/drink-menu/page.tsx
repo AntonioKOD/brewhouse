@@ -1,12 +1,13 @@
-'use client'
+import { DrinkMenu } from "@/components/drink-menu"
 
-export default function DrinkMenu(){
-    return(
-        <div className="min-h-screen flex flex-col items-center justify-center">
-            <h1 className="text-4xl font-bold mb-8">Drink Menu</h1>
-            <p className="text-lg text-center max-w-2xl">
-                Explore our extensive drink menu featuring a wide selection of craft beers, signature cocktails, fine wines, and non-alcoholic beverages. Whether you&apos;re in the mood for a refreshing pint or a sophisticated cocktail, we have something to satisfy every palate.
-            </p>
-        </div>
-    )
+export default function DrinksPage() {
+  return (
+    <div className="min-h-screen bg-background py-12 px-4 mt-24 mb-24">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-2">Drink Menu</h1>
+        <p className="text-center text-muted-foreground mb-10">Signature cocktails, wines, and cold brews</p>
+        <DrinkMenu />
+      </div>
+    </div>
+  )
 }

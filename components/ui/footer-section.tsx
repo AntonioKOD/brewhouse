@@ -36,18 +36,18 @@ function Footerdemo() {
 
   return (
     <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
-      <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
-          <div className="relative">
-            <Image src={logo || "/placeholder.svg"} alt="Company Logo" width={100} height={100} className="mb-4" />
-            <div className="absolute -right-4 top-0 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
+      <div className="container mx-auto px-4 py-8 md:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-6 md:gap-8 lg:grid-cols-5">
+          <div className="relative col-span-2 flex justify-center lg:col-span-1 lg:justify-start">
+            <Image src={logo || "/placeholder.svg"} alt="Company Logo" width={140} height={80} className="mb-2" />
           </div>
+
           <div>
-            <h3 className="mb-4 text-lg font-semibold flex items-center gap-2">
-              <LinkIcon className="h-5 w-5 text-primary" />
+            <h3 className="mb-2 text-sm font-semibold flex items-center gap-1.5 md:text-base md:mb-3">
+              <LinkIcon className="h-4 w-4 text-primary" />
               Quick Links
             </h3>
-            <nav className="space-y-2 text-sm">
+            <nav className="space-y-1 text-xs md:text-sm">
               <Link href="/" className="block text-muted-foreground transition-colors hover:text-primary">
                 Home
               </Link>
@@ -65,56 +65,58 @@ function Footerdemo() {
               </Link>
             </nav>
           </div>
+
           <div>
-            <h3 className="mb-4 text-lg font-semibold flex items-center gap-2">
-              <Clock className="h-5 w-5 text-primary" />
+            <h3 className="mb-2 text-sm font-semibold flex items-center gap-1.5 md:text-base md:mb-3">
+              <Clock className="h-4 w-4 text-primary" />
               Hours
             </h3>
-            <div className="space-y-4 text-sm">
+            <div className="space-y-2 text-xs md:text-sm">
               <div>
-                <div className="flex items-center gap-2 font-medium text-primary mb-1">
-                  <Beer className="h-4 w-4" />
+                <div className="flex items-center gap-1.5 font-medium text-primary mb-0.5">
+                  <Beer className="h-3 w-3 md:h-4 md:w-4" />
                   Bar
                 </div>
                 <p className="text-muted-foreground">Daily: 11am - 1am</p>
               </div>
               <div>
-                <div className="flex items-center gap-2 font-medium text-primary mb-1">
-                  <UtensilsCrossed className="h-4 w-4" />
+                <div className="flex items-center gap-1.5 font-medium text-primary mb-0.5">
+                  <UtensilsCrossed className="h-3 w-3 md:h-4 md:w-4" />
                   Kitchen
                 </div>
-                <p className="text-muted-foreground">Sun - Wed: 11am - 10pm</p>
-                <p className="text-muted-foreground">Thu - Sat: 11am - 11pm</p>
+                <p className="text-muted-foreground">Sun-Wed: 11am-10pm</p>
+                <p className="text-muted-foreground">Thu-Sat: 11am-11pm</p>
               </div>
             </div>
           </div>
+
           <div>
-            <h3 className="mb-4 text-lg font-semibold flex items-center gap-2">
-              <MapPin className="h-5 w-5 text-primary" />
+            <h3 className="mb-2 text-sm font-semibold flex items-center gap-1.5 md:text-base md:mb-3">
+              <MapPin className="h-4 w-4 text-primary" />
               Contact Us
             </h3>
-            <address className="space-y-2 text-sm not-italic text-muted-foreground">
+            <address className="space-y-0.5 text-xs md:text-sm not-italic text-muted-foreground">
               <p>703 Granite Street</p>
               <p>Braintree, MA 02184</p>
-              <p>Phone: (781) 356-4500</p>
+              <p>(781) 356-4500</p>
             </address>
           </div>
-          <div className="relative">
-            <h3 className="mb-4 text-lg font-semibold flex items-center gap-2">
-              <Users className="h-5 w-5 text-primary" />
+
+          <div>
+            <h3 className="mb-2 text-sm font-semibold flex items-center gap-1.5 md:text-base md:mb-3">
+              <Users className="h-4 w-4 text-primary" />
               Follow Us
             </h3>
-            <div className="mb-6 flex space-x-4">
-              <Link href='https://www.facebook.com/braintree.brewhouse/'>
+            <div className="mb-3 flex space-x-2">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full bg-transparent hover:bg-primary hover:text-primary-foreground"
+                      className="h-8 w-8 rounded-full bg-transparent hover:bg-primary hover:text-primary-foreground"
                     >
-                      <Facebook className="h-4 w-4" />
+                      <Facebook className="h-3.5 w-3.5" />
                       <span className="sr-only">Facebook</span>
                     </Button>
                   </TooltipTrigger>
@@ -123,17 +125,32 @@ function Footerdemo() {
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-              </Link>
-              <Link href='https://www.instagram.com/braintreebrewhouse/?igsh=eDBhMXdiZTEzNnhu&utm_source=qr'>
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <Button
                       variant="outline"
                       size="icon"
-                      className="rounded-full bg-transparent hover:bg-primary hover:text-primary-foreground"
+                      className="h-8 w-8 rounded-full bg-transparent hover:bg-primary hover:text-primary-foreground"
                     >
-                      <Instagram className="h-4 w-4" />
+                      <Twitter className="h-3.5 w-3.5" />
+                      <span className="sr-only">Twitter</span>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Follow us on Twitter</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-8 w-8 rounded-full bg-transparent hover:bg-primary hover:text-primary-foreground"
+                    >
+                      <Instagram className="h-3.5 w-3.5" />
                       <span className="sr-only">Instagram</span>
                     </Button>
                   </TooltipTrigger>
@@ -142,20 +159,37 @@ function Footerdemo() {
                   </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
-              </Link>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="h-8 w-8 rounded-full bg-transparent hover:bg-primary hover:text-primary-foreground"
+                    >
+                      <Linkedin className="h-3.5 w-3.5" />
+                      <span className="sr-only">LinkedIn</span>
+                    </Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Connect with us on LinkedIn</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </div>
             <div className="flex items-center space-x-2">
-              <Sun className="h-4 w-4 text-muted-foreground" />
+              <Sun className="h-3.5 w-3.5 text-muted-foreground" />
               <Switch id="dark-mode" checked={isDarkMode} onCheckedChange={setIsDarkMode} />
-              <Moon className="h-4 w-4 text-muted-foreground" />
+              <Moon className="h-3.5 w-3.5 text-muted-foreground" />
               <Label htmlFor="dark-mode" className="sr-only">
                 Toggle dark mode
               </Label>
             </div>
           </div>
         </div>
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t pt-8 text-center md:flex-row">
-          <p className="text-sm text-muted-foreground">© 2025 Braintree Brewhouse. All rights reserved.</p>
+
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t pt-4 text-center md:flex-row">
+          <p className="text-xs text-muted-foreground">© 2025 Braintree Brewhouse. All rights reserved.</p>
         </div>
       </div>
     </footer>
