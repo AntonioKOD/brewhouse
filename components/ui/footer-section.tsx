@@ -189,7 +189,7 @@ function Footerdemo() {
         </div>
 
         <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t pt-4 text-center md:flex-row">
-          <p className="text-xs text-muted-foreground">© 2025 Braintree Brewhouse. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">© 2025 Braintree Brewhouse. All rights reserved. | Made with ❤️ by <Link href='https://buildquick.io'>BuildQuick</Link></p>
         </div>
       </div>
     </footer>
